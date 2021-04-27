@@ -4,4 +4,8 @@ class ArticlesController < ApplicationController
         @article = Article.find(params[:id]) # params is a hash data structure it means when we type id in url it will get contents of this id
     end
 
+    def index
+       @articles = Article.all
+    end
+
 end
