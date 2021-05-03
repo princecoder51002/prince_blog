@@ -34,6 +34,7 @@ class ArticlesController < ApplicationController
 
     def create
        @article = Article.new(article_params)
+       @article.user = User.first #any article which will be created has id of first user and it is a temporary solution for this thing
        if @article.save
         flash[:notice] = "Article was created succesfully." # we can also use alert insted of notice
     #  redirect_to article_path(@article)
