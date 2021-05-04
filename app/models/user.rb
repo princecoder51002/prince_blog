@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    before_save {self.email = email.downcase} # this is used to save the entered email in downcase letters even if user enters any uppercase letter
     has_many :articles
 
     validates :username, presence: true, uniqueness: { case_sensitive: false}, length: {minimum:3, maximum:25}
