@@ -22,7 +22,7 @@ class UsersController < ApplicationController
        @user = User.find(params[:id])
        if @user.update(user_params)
          flash[:notice] = "#{@user.username},Your Account Information Was Successfully Updated"
-         redirect_to articles_path
+         redirect_to @user
        else
         render 'edit'
        end
