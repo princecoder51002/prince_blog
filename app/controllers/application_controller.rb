@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-        !!current_user
+        !!current_user # simply checking that current user is logged in or not by turning current user into a boolean and !! for boolean
     end
     
     def require_user
