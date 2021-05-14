@@ -20,6 +20,20 @@
  height: 425px;
 }
 
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
+.pic{
+  background-image: asset-url('IMG_20200830_193338.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+ }
+
 html,
 body {
   height: 100%;
